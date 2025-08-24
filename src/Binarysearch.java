@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class Binarysearch {
     public static void main(String[] args) {
         int[] arr = { 2, 3, 4, 10, 40};
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the element to search : ");
-        int target = sc.nextInt();
-        int num = intervalbinarysearch(arr, target);
-        System.out.println("The element is found at " + num + " position");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter the element to search : ");
+            int target = sc.nextInt();
+            int num = intervalbinarysearch(arr, target);
+            System.out.println("The element is found at " + num + " position");
+        }
     }
 
     public static int intervalbinarysearch(int[] arr, int target){
