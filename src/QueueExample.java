@@ -80,13 +80,13 @@ class Queue {
 public class QueueExample {
     public static void main(String[] args) {
         Queue queue = new Queue();
-//        queue.enqueue(10);
-//        queue.display();
-//        queue.enqueue(20);
-//        queue.display();
-//        queue.enqueue(30);
-//        queue.display();
-//        queue.enqueue(40);
+        queue.enqueue(10);
+        queue.display();
+        queue.enqueue(20);
+        queue.display();
+        queue.enqueue(30);
+        queue.display();
+        queue.enqueue(40);
         queue.display();
         System.out.println("Dequeued : " + queue.dequeue());
         queue.display();
