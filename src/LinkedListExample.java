@@ -1,32 +1,32 @@
-class Node {
+class LinkedNode {
     int data;
-    Node next;
+    LinkedNode next;
 
-    Node(int data) {
+    LinkedNode(int data) {
         this.data = data;
         this.next = null;
     }
 }
 
 class LinkedList {
-    Node head;
+    LinkedNode head;
 
     public void insert(int data) {
-        Node new_node = new Node(data);
+        LinkedNode new_LinkedNode = new LinkedNode(data);
 
         if (head == null) {
-            head = new_node;
+            head = new_LinkedNode;
         } else {
-            Node temp = head;
+            LinkedNode temp = head;
             while (temp.next != null) {
                 temp = temp.next;
             }
-            temp.next = new_node;
+            temp.next = new_LinkedNode;
         }
     }
 
     public void delete(int key) {
-        Node temp = head, prev = null;
+        LinkedNode temp = head, prev = null;
 
         if (temp != null && temp.data == key) {
             head = temp.next;
@@ -44,7 +44,7 @@ class LinkedList {
     }
 
     public void display() {
-        Node temp = head;
+        LinkedNode temp = head;
         while (temp != null) {
             System.out.print(temp.data + "->");
             temp = temp.next;
